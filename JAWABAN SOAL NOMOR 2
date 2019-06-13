@@ -1,0 +1,23 @@
+<?php
+$array = [
+    0 => 9, 
+    1 => 1, 
+    2 => 4,
+    3 => 2,
+    4 => 6,
+];
+
+$length = count($array);
+$count=0;
+
+for($count=1;$count<=$length;$count++){ //looping agar pengecekan sebanyak jumlah array
+		
+	for($i=0;$i<$length-1;$i++){	//looping untuk eksekusi nilai per array
+		if($array[$i] >= $array[$i+1]){
+				array_splice($array,$i,0,array_splice($array,$i+1,1));	//swap dan hapus array		
+		}
+	}
+}
+		print_r($array);
+
+?>
