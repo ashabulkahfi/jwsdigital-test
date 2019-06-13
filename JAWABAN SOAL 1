@@ -1,0 +1,15 @@
+<?php
+$word = "ABCA";
+$in_arr=str_split($word);
+$temp = [];
+for($a=0;$a<count($in_arr);$a++){	
+	if(in_array($in_arr[$a],$temp)){
+		if(count($temp) > 0){		
+			echo $in_arr[$a];
+			break;
+		}
+	}else{	
+		array_push($temp,$in_arr[$a]);
+	}
+}
+?>
