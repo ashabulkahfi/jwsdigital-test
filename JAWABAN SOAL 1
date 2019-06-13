@@ -1,12 +1,12 @@
 <?php
 $word = "ABCA";
-$in_arr=str_split($word);
+$in_arr=str_split($word); //set array
 $temp = [];
 for($a=0;$a<count($in_arr);$a++){	
-	if(in_array($in_arr[$a],$temp)){
+	if(in_array($in_arr[$a],$temp)){ //if exist
 		if(count($temp) > 0){		
 			echo $in_arr[$a];
-			break;
+			break; //jika sudah ketemu
 		}
 	}else{	
 		array_push($temp,$in_arr[$a]);
